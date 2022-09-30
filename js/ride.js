@@ -77,12 +77,20 @@ WildRydes.map = WildRydes.map || {};
     }
 
     function handleRequestClick(event) {
-        var pickupLocation = WildRydes.map.selectedPoint;
+        var pickupLocation = {
+            latitude: 51.557899,
+            longtitude: -113.3194899  
+        }
+        //= WildRydes.map.selectedPoint;
         event.preventDefault();
         requestUnicorn(pickupLocation);
     }
 
     function animateArrival(callback) {
+
+        console.log('The crappy ESRI map does not work AWS!');
+
+        /*
         var dest = WildRydes.map.selectedPoint;
         var origin = {};
 
@@ -99,6 +107,7 @@ WildRydes.map = WildRydes.map || {};
         }
 
         WildRydes.map.animate(origin, dest, callback);
+        */
     }
 
     function displayUpdate(text) {
